@@ -17,7 +17,7 @@ def foo():
     print(text)
     print(topic_num)
     tmodel(text, topic_num) 
-    return jsonify("http://localhost:5000/static/vis.html"), 200, {'Content-Type': 'application/json'}
+    return jsonify("ok"), 200, {'Content-Type': 'application/json'}
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
