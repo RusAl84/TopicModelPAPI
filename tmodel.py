@@ -192,13 +192,13 @@ def tmodel(text, topic_num):
         stop_words.extend(['from', 'subject', 're', 'edu', 'use'])
         cols = [color for name, color in mcolors.TABLEAU_COLORS.items()]  # more colors: 'mcolors.XKCD_COLORS'
         cloud = WordCloud(stopwords=stop_words,
-                          background_color='white',
-                          width=2500,
-                          height=1800,
-                          max_words=10,
-                          colormap='tab10',
-                          color_func=lambda *args, **kwargs: cols[i],
-                          prefer_horizontal=1.0)
+                        background_color='white',
+                        width=2500,
+                        height=1800,
+                        max_words=10,
+                        colormap='tab10',
+                        color_func=lambda *args, **kwargs: cols[i],
+                        prefer_horizontal=1.0)
         topics = lda_model.show_topics(formatted=False)
         fig, axes = plt.subplots(2, 2, figsize=(10, 10), sharex=True, sharey=True)
         for i, ax in enumerate(axes.flatten()):
